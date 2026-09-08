@@ -1,0 +1,1 @@
+{"default_channel":"main","display_name":"AART Test Registry","protocol_version":1,"registry_id":"aart-test-registry","required_capabilities":["artifact-manifest-v1","lockfile-v1","registry-entry-v1"],"requires_aart":{"max_exclusive":"1.0.0","min_inclusive":"0.0.1"},"schema_version":1,"services":{}}
