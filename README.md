@@ -17,7 +17,7 @@ Its registry id is `aart-test-registry`. Consumers name it when they add this re
 | `collections/` | Named groups of artifacts installed together |
 | `aart.lock.json` | Resolved, pinned contents. Generated - never edited by hand |
 | `aart.index.json` | The published index consumers read. Generated |
-| `.github/workflows/` | The quality gate, and the usage-reporting pair |
+| `.github/workflows/` | The quality gate, and the usage-reporting pair if this registry offers it |
 
 The JSON files and the workflows are **managed**: AART regenerates them and refuses to run against
 a copy that was hand-edited. This README is not managed. Edit it freely.
@@ -149,6 +149,7 @@ window - a pin outside it is a registry contradicting itself.
 
 ## Usage reporting
 
-The two `aart-usage-*` workflows accept voluntary, redacted usage reports as GitHub Issues and
-build a dashboard from the ones that validate. Reports carry no credentials, paths or repository
-names. Delete both workflows and the issue template if you do not want them.
+This registry does not collect usage reports, so no issue template or reporting workflow was
+generated. To offer the service, re-run `registry init` in a fresh workspace with
+`--usage-reporting-repository owner/name`; reports are voluntary and redacted, and carry no
+credentials, paths or repository names.
